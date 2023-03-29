@@ -5,9 +5,9 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 function NavBar() {
   return (
-    <Navbar variant='light' bg='dark' expand='lg'>
+    <Navbar variant='dark' bg='dark' expand='lg'>
       <Container fluid>
-        <Navbar.Brand href='#home'>GGworkz</Navbar.Brand>
+        <Navbar.Brand href='#home'>GGwo</Navbar.Brand>
         <Navbar.Toggle aria-controls='navbar-dark-example' />
         <Navbar.Collapse id='navbar-dark-example'>
           <Nav>
