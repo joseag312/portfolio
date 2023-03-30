@@ -1,13 +1,14 @@
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
 
-function MyCarousel() {
+function GCarousel() {
   return (
-    <Carousel>
+    <Carousel className='carousel'>
       <Carousel.Item interval={1000}>
         <Image
           src={"https://i.ibb.co/hZp03Rs/desktop-large2.jpg"}
           fluid={true}
+          className='carousel-image'
         ></Image>
         <Carousel.Caption>
           <h3>First slide label</h3>
@@ -18,6 +19,7 @@ function MyCarousel() {
         <Image
           src={"https://i.ibb.co/VSzk3PM/paint-web.jpg"}
           fluid={true}
+          className='carousel-image'
         ></Image>
         <Carousel.Caption>
           <h3>Second slide label</h3>
@@ -28,6 +30,7 @@ function MyCarousel() {
         <Image
           src={"https://i.ibb.co/vHKWrn7/one-click-away.jpg"}
           fluid={true}
+          className='carousel-image'
         ></Image>
 
         <Carousel.Caption>
@@ -41,4 +44,4 @@ function MyCarousel() {
   );
 }
 
-export default MyCarousel;
+export default GCarousel;

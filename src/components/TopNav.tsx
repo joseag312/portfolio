@@ -1,16 +1,27 @@
 import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-function NavBar() {
+function TopNav() {
   return (
-    <Navbar variant='dark' bg='dark' expand='lg'>
+    <Navbar variant='dark' bg='dark' expand='lg' fixed='top'>
       <Container fluid>
-        <Navbar.Brand href='#home'>GGwo</Navbar.Brand>
+        <Navbar.Brand href='#home'>
+          <Image
+            src={"/logo.svg"}
+            fluid={false}
+            height='24px'
+            className='d-inline-block align-text-top'
+          ></Image>
+          &nbsp;&nbsp;&nbsp;GGworkz
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls='navbar-dark-example' />
+
         <Navbar.Collapse id='navbar-dark-example'>
           <Nav>
+            <Nav.Link href='#home'>Home</Nav.Link>
             <NavDropdown
               id='nav-dropdown-dark-example'
               title='Dropdown'
@@ -33,4 +44,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default TopNav;

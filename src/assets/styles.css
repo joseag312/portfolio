@@ -1,0 +1,11 @@
+header {
+  height: 56px;
+}
+
+.carousel {
+  height: calc(100vh - 112px);
+}
+
+.carousel-image {
+  height: calc(100vh - 112px);
+}
