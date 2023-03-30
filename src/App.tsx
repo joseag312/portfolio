@@ -1,3 +1,4 @@
+import { Col, Row } from "react-bootstrap";
 import "./assets/styles.css";
 import BottomNav from "./components/BottomNav";
 import GCarousel from "./components/GCarousel";
@@ -6,15 +7,13 @@ import TopNav from "./components/TopNav";
 function App() {
   return (
     <>
-      <header>
-        <TopNav></TopNav>
-      </header>
+      <TopNav />
       <a id='#home'></a>
-      <div className='row'>
-        <div className='col-12'>
+      <Row className='offset-nav'>
+        <Col>
           <GCarousel></GCarousel>
-        </div>
-      </div>
+        </Col>
+      </Row>
       <BottomNav></BottomNav>
     </>
   );

@@ -5,9 +5,9 @@ import FavIcon from "./FavIcon";
 
 function BottomNav() {
   return (
-    <Navbar bg='dark' variant='dark'>
-      <Container>
-        <Nav className='me-auto'>
+    <Navbar bg='dark' variant='dark' fixed='bottom'>
+      <Container fluid className='justify-content-end'>
+        <Nav>
           <Nav.Link>
             <FavIcon iconType='LinkedIn' />
           </Nav.Link>
