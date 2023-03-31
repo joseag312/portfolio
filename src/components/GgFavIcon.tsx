@@ -2,7 +2,7 @@ interface Props {
   iconType: "LinkedIn" | "GitHub" | "Phone" | "Mail";
 }
 
-function FavIcon({ iconType }: Props) {
+function GgFavIcon({ iconType }: Props) {
   switch (iconType) {
     case "LinkedIn":
       return (
@@ -59,4 +59,4 @@ function FavIcon({ iconType }: Props) {
   }
 }
 
-export default FavIcon;
+export default GgFavIcon;

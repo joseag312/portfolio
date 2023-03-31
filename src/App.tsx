@@ -1,20 +1,20 @@
 import { Col, Row } from "react-bootstrap";
 import "./assets/styles.css";
-import BottomNav from "./components/BottomNav";
-import GCarousel from "./components/GCarousel";
-import TopNav from "./components/TopNav";
+import GgBackground from "./components/GgBackground";
+import GgBottomNav from "./components/GgBottomNav";
+import GgTopNav from "./components/GgTopNav";
 
 function App() {
   return (
     <>
-      <TopNav />
+      <GgTopNav />
       <a id='#home'></a>
-      <Row className='offset-nav'>
+      <Row className='offset-nav-top'>
         <Col>
-          <GCarousel></GCarousel>
+          <GgBackground />
         </Col>
       </Row>
-      <BottomNav></BottomNav>
+      <GgBottomNav />
     </>
   );
 }

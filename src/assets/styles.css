@@ -1,11 +1,94 @@
-.offset-nav {
+.offset-nav-top {
   margin-top: 56px;
 }
 
-.carousel {
+.offset-nav-bottom {
+  margin-bottom: 56px;
+}
+
+.section {
   height: calc(100vh - 112px);
 }
 
-.carousel-image {
-  height: calc(100vh - 112px);
+body {
+  background: black;
+  overflow-x: hidden;
+}
+
+#background path:nth-child(1) {
+  stroke: red;
+}
+
+.hexagon-container {
+  position: relative;
+}
+
+.hexagon-title {
+  color: white;
+  position: absolute;
+  font-size: calc(3vw + 5px);
+  left: 12vw;
+  top: 50vh;
+  z-index: 10;
+}
+
+.hexagon-subtitle {
+  color: white;
+  position: absolute;
+  font-size: calc(1.5vw + 5px);
+  left: 12vw;
+  top: calc(52vh + 5vw + 5px);
+  z-index: 10;
+}
+
+.hexagon-svg {
+  position: fixed;
+  top: 56px;
+  right: 0px;
+  height: 100vh;
+  width: auto;
+  float: right;
+}
+
+@media (max-width: 768px) {
+  .hexagon-title {
+    left: calc(50vw - 79px);
+    top: calc(45vh - 65px);
+    font-size: 30px;
+  }
+
+  .hexagon-subtitle {
+    left: calc(50vw - 79px);
+    top: calc(45vh - 30px);
+    font-size: 15px;
+  }
+}
+
+.position-relative {
+  position: relative;
+}
+
+.carousel-item {
+  height: 86vh;
+}
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.carousel-caption-middle {
+  top: 16.25rem;
+}
+
+.carousel-caption-bottom {
+  top: 30.25rem;
+}
+
+.carousel-caption-top {
+  top: 5.25rem;
 }

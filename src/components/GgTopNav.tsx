@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-function TopNav() {
+function GgTopNav() {
   return (
     <Navbar variant='dark' bg='dark' expand='lg' fixed='top'>
       <Container fluid>
@@ -44,4 +44,4 @@ function TopNav() {
   );
 }
 
-export default TopNav;
+export default GgTopNav;
