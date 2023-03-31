@@ -11,9 +11,7 @@ function GgBackground() {
   let viewBoxH = Math.max(350, 50 + Math.floor(width / 4));
 
   return (
-    <div className='hexagon-container section position-relative'>
-      <p className='hexagon-title'>Hi! I'm Jose.</p>
-      <p className='hexagon-subtitle'>A software engineer&nbsp;☕️</p>
+    <div className='hexagon-container position-relative'>
       <svg
         className='hexagon-svg'
         viewBox={`${0} ${0} ${viewBoxW} ${viewBoxH}`}

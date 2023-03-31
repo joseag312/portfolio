@@ -1,3 +1,12 @@
+/**************************************/
+/* Layout
+/**************************************/
+
+body {
+  background: black;
+  overflow-x: hidden;
+}
+
 .offset-nav-top {
   margin-top: 56px;
 }
@@ -10,27 +19,9 @@
   height: calc(100vh - 112px);
 }
 
-body {
-  background: black;
-  overflow-x: hidden;
-}
-
-#background path:nth-child(1) {
-  stroke: red;
-}
-
-.hexagon-container {
-  position: relative;
-}
-
-.hexagon-title {
-  color: white;
-  position: absolute;
-  font-size: calc(3vw + 5px);
-  left: 12vw;
-  top: 50vh;
-  z-index: 10;
-}
+/**************************************/
+/* Carousel
+/**************************************/
 
 .hexagon-subtitle {
   color: white;
@@ -41,13 +32,13 @@ body {
   z-index: 10;
 }
 
-.hexagon-svg {
-  position: fixed;
-  top: 56px;
-  right: 0px;
-  height: 100vh;
-  width: auto;
-  float: right;
+.hexagon-title {
+  color: white;
+  position: absolute;
+  font-size: calc(3vw + 5px);
+  left: 12vw;
+  top: 50vh;
+  z-index: 10;
 }
 
 @media (max-width: 768px) {
@@ -64,8 +55,20 @@ body {
   }
 }
 
-.position-relative {
-  position: relative;
+/**************************************/
+/* Carousel
+/**************************************/
+
+.carousel-caption-middle {
+  top: 16.25rem;
+}
+
+.carousel-caption-bottom {
+  top: 30.25rem;
+}
+
+.carousel-caption-top {
+  top: 5.25rem;
 }
 
 .carousel-item {
@@ -81,14 +84,48 @@ body {
   height: 100%;
 }
 
-.carousel-caption-middle {
-  top: 16.25rem;
+/**************************************/
+/* Hero
+/**************************************/
+
+.white-shadow {
+  filter: drop-shadow(0px 0px 24px rgb(256 256 256 / 1.4));
 }
 
-.carousel-caption-bottom {
-  top: 30.25rem;
+/**************************************/
+/* Project List
+/**************************************/
+
+.box-white-shadow {
+  box-shadow: 0px 0px 10px white;
 }
 
-.carousel-caption-top {
-  top: 5.25rem;
+/**************************************/
+/* Background
+/**************************************/
+
+.hexagon-container {
+  position: relative;
+}
+
+.hexagon-svg {
+  position: fixed;
+  top: 56px;
+  right: 0px;
+  height: 100vh;
+  width: auto;
+  float: right;
+}
+
+/**************************************/
+/* Utility
+/**************************************/
+
+.position-relative {
+  position: relative;
+}
+
+.border--dashed {
+  border-style: dashed !important;
+  border-width: 3px !important;
 }

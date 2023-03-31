@@ -3,35 +3,33 @@ import Image from "react-bootstrap/Image";
 
 function GgCarousel() {
   return (
-    <div className='section'>
-      <Carousel interval={10000} pause={false} variant='dark'>
+    <div className='section positon-relative'>
+      <Carousel interval={2500} pause={false}>
         <Carousel.Item>
           <Image
-            src={"https://i.ibb.co/hZp03Rs/desktop-large2.jpg"}
+            src={"public/img1.png"}
             fluid={true}
             className='section'
           ></Image>
           <Carousel.Caption className='carousel-caption-middle'>
-            <h3>Let's work together</h3>
-            <p>How do you take your coffee?</p>
+            <h3 className='text-dark'>Let's work together</h3>
+            <p className='text-dark'>How do you take</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <Image
-            src={"https://i.ibb.co/VSzk3PM/paint-web.jpg"}
+            src={"public/img1.png"}
             fluid={true}
             className='section'
           ></Image>
           <Carousel.Caption className='carousel-caption-bottom'>
-            <h3 className='text-light'>Second slide label</h3>
-            <p className='text-light'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <Image
-            src={"https://i.ibb.co/vHKWrn7/one-click-away.jpg"}
+            src={"public/img1.png"}
             fluid={true}
             className='section'
           ></Image>
