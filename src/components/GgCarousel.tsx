@@ -3,41 +3,27 @@ import Image from "react-bootstrap/Image";
 
 function GgCarousel() {
   return (
-    <div className='section positon-relative'>
-      <Carousel interval={2500} pause={false}>
-        <Carousel.Item>
-          <Image
-            src={"public/img1.png"}
-            fluid={true}
-            className='section'
-          ></Image>
+    <div className='h-100 positon-relative'>
+      <Carousel interval={2500} pause={false} className='h-100'>
+        <Carousel.Item className='h-100'>
+          <Image src={""} fluid={true} className='h-100'></Image>
           <Carousel.Caption className='carousel-caption-middle'>
-            <h3 className='text-dark'>Let's work together</h3>
-            <p className='text-dark'>How do you take</p>
+            <h3>First slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
-          <Image
-            src={"public/img1.png"}
-            fluid={true}
-            className='section'
-          ></Image>
+        <Carousel.Item className='h-100'>
+          <Image src={""} fluid={true} className='h-100'></Image>
           <Carousel.Caption className='carousel-caption-bottom'>
             <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
-          <Image
-            src={"public/img1.png"}
-            fluid={true}
-            className='section'
-          ></Image>
+        <Carousel.Item className='h-100'>
+          <Image src={""} fluid={true} className='h-100'></Image>
           <Carousel.Caption className='carousel-caption-top'>
-            <h3 className='text-dark'>Third slide label</h3>
-            <p className='text-dark'>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h3>Third slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
