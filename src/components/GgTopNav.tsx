@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
+// Todo: Event bubbling look up and hide nav when clicked outside
 function GgTopNav() {
   return (
     <Navbar variant='dark' bg='dark' expand='lg' fixed='top'>

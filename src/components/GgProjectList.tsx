@@ -1,4 +1,4 @@
-import GgHexagonSVG from "./GgHexagonSVG";
+import GgProject from "./GgProject";
 
 function GgProjectList() {
   return (
@@ -12,9 +12,27 @@ function GgProjectList() {
         Drag and drop!
       </p>
       <div className='h-100 d-flex flex-column align-items-center justify-content-around'>
-        <GgHexagonSVG></GgHexagonSVG>
-        <GgHexagonSVG></GgHexagonSVG>
-        <GgHexagonSVG></GgHexagonSVG>
+        <GgProject
+          title1='LayGoo!'
+          caption1='Stay tuned...'
+          caption1vhX='50vh'
+          caption1vhY='50vw'
+          img1=''
+        />
+        <GgProject
+          title1='It Works!!'
+          caption1='Stay tuned...'
+          caption1vhX='50vh'
+          caption1vhY='50vw'
+          img1=''
+        />
+        <GgProject
+          title1='Coming soon!'
+          caption1='Stay tuned...'
+          caption1vhX='50vh'
+          caption1vhY='50vw'
+          img1=''
+        />
       </div>
       <br></br>
       <br></br>

@@ -20,37 +20,27 @@ body {
 }
 
 /**************************************/
-/* Carousel
+/* Home
 /**************************************/
 
 .hexagon-subtitle {
   color: white;
-  position: absolute;
   font-size: calc(1.5vw + 5px);
-  left: 12vw;
-  top: calc(52vh + 5vw + 5px);
   z-index: 10;
 }
 
 .hexagon-title {
   color: white;
-  position: absolute;
   font-size: calc(3vw + 5px);
-  left: 12vw;
-  top: 50vh;
   z-index: 10;
 }
 
 @media (max-width: 768px) {
   .hexagon-title {
-    left: calc(50vw - 79px);
-    top: calc(45vh - 65px);
     font-size: 30px;
   }
 
   .hexagon-subtitle {
-    left: calc(50vw - 79px);
-    top: calc(45vh - 30px);
     font-size: 15px;
   }
 }
@@ -90,6 +80,10 @@ body {
 
 .white-shadow {
   filter: drop-shadow(0px 0px 24px rgb(256 256 256 / 1.4));
+}
+
+.white-shadow-high {
+  filter: drop-shadow(0px 0px 4px rgb(256 256 256 / 1.4));
 }
 
 .white-fill {

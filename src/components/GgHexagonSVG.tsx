@@ -1,6 +1,6 @@
 function GgHexagonSVG() {
   return (
-    <div className='white-shadow widget' draggable={true}>
+    <div className='white-shadow widget'>
       <svg
         fill='teal'
         height='80px'
@@ -10,6 +10,7 @@ function GgHexagonSVG() {
         xmlns='http://www.w3.org/2000/svg'
         stroke='black'
         viewBox='0 0 490 490'
+        dur={"0.5s"}
       >
         <g>
           <path
