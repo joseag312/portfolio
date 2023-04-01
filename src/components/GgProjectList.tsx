@@ -29,7 +29,7 @@ function GgProjectList() {
       </p>
       <div className='h-100 d-flex flex-column align-items-center justify-content-around'>
         {repos.map((repoName) => (
-          <GgProject projectName={`${repoName}`} />
+          <GgProject key={`${repoName}`} projectName={`${repoName}`} />
         ))}
       </div>
       <br></br>
