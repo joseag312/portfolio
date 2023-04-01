@@ -1,19 +1,5 @@
 interface ProjectProps {
-  title1: string;
-  caption1: string;
-  img1: string;
-  caption1vhX: string;
-  caption1vhY: string;
-  title2?: string;
-  caption2?: string;
-  img2?: string;
-  caption2vhX?: string;
-  caption2vhY?: string;
-  title3?: string;
-  caption3?: string;
-  img3?: string;
-  caption3vhX?: string;
-  caption3vhY?: string;
+  projectName: string;
 }
 
 function GgProject(props: ProjectProps) {

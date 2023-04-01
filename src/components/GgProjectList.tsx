@@ -1,6 +1,22 @@
+import { useQuery } from "react-query";
 import GgProject from "./GgProject";
 
 function GgProjectList() {
+  let repos: string[] = [];
+  const getFacts = async () => {
+    const res = await fetch("https://api.github.com/users/joseag312/repos");
+    return res.json();
+  };
+  const { data, status } = useQuery([], getFacts);
+
+  if (status == "success") {
+    data.map((result: any) => {
+      if (result.name != "joseag312") {
+        repos.push(result.name);
+      }
+    });
+  }
+
   return (
     <div className='section d-flex flex-column align-items-center justify-content-start position-relative'>
       <br></br>
@@ -12,27 +28,9 @@ function GgProjectList() {
         Drag and drop!
       </p>
       <div className='h-100 d-flex flex-column align-items-center justify-content-around'>
-        <GgProject
-          title1='LayGoo!'
-          caption1='Stay tuned...'
-          caption1vhX='50vh'
-          caption1vhY='50vw'
-          img1=''
-        />
-        <GgProject
-          title1='It Works!!'
-          caption1='Stay tuned...'
-          caption1vhX='50vh'
-          caption1vhY='50vw'
-          img1=''
-        />
-        <GgProject
-          title1='Coming soon!'
-          caption1='Stay tuned...'
-          caption1vhX='50vh'
-          caption1vhY='50vw'
-          img1=''
-        />
+        {repos.map((repoName) => (
+          <GgProject projectName={`${repoName}`} />
+        ))}
       </div>
       <br></br>
       <br></br>
