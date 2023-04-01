@@ -22,11 +22,10 @@ function GgProjectList() {
       <br></br>
       <br></br>
       <br></br>
-      <p className='white-shadow text-light text-center'>
+      <p className='hexagon-subtitle white-shadow text-light text-center'>
         Some of my handiwork 🥽
-        <br></br>
-        Drag and drop!
       </p>
+      <p className='white-shadow text-light text-center'>Drag and drop!</p>
       <div className='h-100 d-flex flex-column align-items-center justify-content-around'>
         {repos.map((repoName) => (
           <GgProject key={`${repoName}`} projectName={`${repoName}`} />

@@ -1,9 +1,11 @@
 import { useState } from "react";
+import GgCarousel from "./GgCarousel";
 import GgHexagonLoader from "./GgHexagonLoader";
 
 function GgProjectBin() {
   const [binStatus, setBinStatus] = useState("inactive");
   const [projectName, setProjectName] = useState("");
+  const [projectData, setProjectData] = useState({});
 
   // Event listeners
   function handleDragOver(e: React.DragEvent) {
@@ -22,7 +24,6 @@ function GgProjectBin() {
     setProjectName(JSON.parse(e.dataTransfer.getData("props")).projectName);
   }
 
-  let data;
   if (binStatus == "loading") {
     fetch(
       "https://api.github.com/repos/joseag312/" +
@@ -30,7 +31,12 @@ function GgProjectBin() {
         "/contents/portfolio.json"
     )
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((response) => atob(response.content))
+      .then((response) => JSON.parse(response))
+      .then((response) => {
+        setProjectData(response);
+        setBinStatus("loaded");
+      });
   }
 
   // Conditional Display
@@ -43,17 +49,27 @@ function GgProjectBin() {
     );
   }
 
-  // let project;
-  // if (binStatus == "loaded") {
-  //   project = (
-  //     <GgCarousel
-  //       title1={data.title1}
-  //       caption1={data.caption1}
-  //       img1={data.img1}
-  //       position1={data.position1}
-  //     ></GgCarousel>
-  //   );
-  // }
+  let project;
+  if (binStatus == "loaded") {
+    let data: any = projectData;
+    console.log(data);
+    project = (
+      <GgCarousel
+        title1={data.title1}
+        caption1={data.caption1}
+        img1={data.img1}
+        position1={data.position1}
+        title2={data.title2}
+        caption2={data.caption2}
+        img2={data.img2}
+        position2={data.position2}
+        title3={data.title3}
+        caption3={data.caption3}
+        img3={data.img3}
+        position3={data.position3}
+      ></GgCarousel>
+    );
+  }
 
   return (
     <div className='section position-relative p-5'>
@@ -72,7 +88,7 @@ function GgProjectBin() {
         onDrop={handleDrop}
       >
         {spinner}
-        {/* {project} */}
+        {project}
       </div>
     </div>
   );
