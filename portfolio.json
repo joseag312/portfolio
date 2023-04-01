@@ -1,14 +1,17 @@
 {
-  "title1": "testinn",
-  "caption1": "caption1",
+  "title1": "HorseApp",
+  "caption1": "Caption 1",
   "img1": "https://i.ibb.co/hZp03Rs/desktop-large2.jpg",
-  "positon1": "top",
-  "title2": "plsgod",
-  "caption2": "caption2",
+  "positon1": "middle",
+  "color1": "dark",
+  "title2": "HorseApp 2",
+  "caption2": "Caption 2",
   "img2": "https://i.ibb.co/VSzk3PM/paint-web.jpg",
-  "positon2": "middle",
-  "title3": "title3",
-  "caption3": "caption3",
+  "positon2": "bottom",
+  "color2": "light",
+  "title3": "HorseApp 3",
+  "caption3": "Caption 3",
   "img3": "https://i.ibb.co/vHKWrn7/one-click-away.jpg",
-  "positon3": "bottom"
+  "positon3": "top",
+  "color3": "dark"
 }

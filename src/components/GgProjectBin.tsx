@@ -59,14 +59,17 @@ function GgProjectBin() {
         caption1={data.caption1}
         img1={data.img1}
         position1={data.position1}
+        color1={data.color1}
         title2={data.title2}
         caption2={data.caption2}
         img2={data.img2}
         position2={data.position2}
+        color2={data.color2}
         title3={data.title3}
         caption3={data.caption3}
         img3={data.img3}
         position3={data.position3}
+        color3={data.color3}
       ></GgCarousel>
     );
   }

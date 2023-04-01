@@ -6,14 +6,17 @@ interface ProjectProps {
   caption1: string;
   img1: string;
   position1: string;
+  color1: string;
   title2?: string;
   caption2?: string;
   img2?: string;
   position2?: string;
+  color2: string;
   title3?: string;
   caption3?: string;
   img3?: string;
   position3?: string;
+  color3: string;
 }
 
 function GgCarousel(props: ProjectProps) {
@@ -26,8 +29,12 @@ function GgCarousel(props: ProjectProps) {
       <Carousel.Item className='h-100'>
         <Image src={props.img1} fluid={true} className='h-100'></Image>
         <Carousel.Caption className={`carousel-caption-${props.position1}`}>
-          <h3>{props.title1}</h3>
-          <p>{props.caption1}</p>
+          <h3 className={`${props.color1 == "dark" ? "text-dark" : ""}`}>
+            {props.title1}
+          </h3>
+          <p className={`${props.color1 == "dark" ? "text-dark" : ""}`}>
+            {props.caption1}
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
     );
@@ -38,8 +45,12 @@ function GgCarousel(props: ProjectProps) {
       <Carousel.Item className='h-100'>
         <Image src={props.img2} fluid={true} className='h-100'></Image>
         <Carousel.Caption className={`carousel-caption-${props.position2}`}>
-          <h3>{props.title2}</h3>
-          <p>{props.caption2}</p>
+          <h3 className={`${props.color2 == "dark" ? "text-dark" : ""}`}>
+            {props.title2}
+          </h3>
+          <p className={`${props.color2 == "dark" ? "text-dark" : ""}`}>
+            {props.caption2}
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
     );
@@ -50,8 +61,12 @@ function GgCarousel(props: ProjectProps) {
       <Carousel.Item className='h-100'>
         <Image src={props.img3} fluid={true} className='h-100'></Image>
         <Carousel.Caption className={`carousel-caption-${props.position3}`}>
-          <h3>{props.title3}</h3>
-          <p>{props.caption3}</p>
+          <h3 className={`${props.color3 == "dark" ? "text-dark" : ""}`}>
+            {props.title3}
+          </h3>
+          <p className={`${props.color3 == "dark" ? "text-dark" : ""}`}>
+            {props.caption3}
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
     );
