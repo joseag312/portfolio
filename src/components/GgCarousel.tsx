@@ -2,6 +2,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
 
 interface ProjectProps {
+  variant: string;
   title1: string;
   caption1: string;
   img1: string;
@@ -29,10 +30,14 @@ function GgCarousel(props: ProjectProps) {
       <Carousel.Item className='h-100'>
         <Image src={props.img1} fluid={true} className='h-100'></Image>
         <Carousel.Caption className={`carousel-caption-${props.position1}`}>
-          <h3 className={`${props.color1 == "dark" ? "text-dark" : ""}`}>
+          <h3
+            className={`${props.color1 == "dark" ? "text-dark" : "text-light"}`}
+          >
             {props.title1}
           </h3>
-          <p className={`${props.color1 == "dark" ? "text-dark" : ""}`}>
+          <p
+            className={`${props.color1 == "dark" ? "text-dark" : "text-light"}`}
+          >
             {props.caption1}
           </p>
         </Carousel.Caption>
@@ -45,10 +50,14 @@ function GgCarousel(props: ProjectProps) {
       <Carousel.Item className='h-100'>
         <Image src={props.img2} fluid={true} className='h-100'></Image>
         <Carousel.Caption className={`carousel-caption-${props.position2}`}>
-          <h3 className={`${props.color2 == "dark" ? "text-dark" : ""}`}>
+          <h3
+            className={`${props.color2 == "dark" ? "text-dark" : "text-light"}`}
+          >
             {props.title2}
           </h3>
-          <p className={`${props.color2 == "dark" ? "text-dark" : ""}`}>
+          <p
+            className={`${props.color2 == "dark" ? "text-dark" : "text-light"}`}
+          >
             {props.caption2}
           </p>
         </Carousel.Caption>
@@ -61,10 +70,14 @@ function GgCarousel(props: ProjectProps) {
       <Carousel.Item className='h-100'>
         <Image src={props.img3} fluid={true} className='h-100'></Image>
         <Carousel.Caption className={`carousel-caption-${props.position3}`}>
-          <h3 className={`${props.color3 == "dark" ? "text-dark" : ""}`}>
+          <h3
+            className={`${props.color3 == "dark" ? "text-dark" : "text-light"}`}
+          >
             {props.title3}
           </h3>
-          <p className={`${props.color3 == "dark" ? "text-dark" : ""}`}>
+          <p
+            className={`${props.color3 == "dark" ? "text-dark" : "text-light"}`}
+          >
             {props.caption3}
           </p>
         </Carousel.Caption>
@@ -74,7 +87,12 @@ function GgCarousel(props: ProjectProps) {
 
   return (
     <div className='h-100 positon-relative'>
-      <Carousel interval={2500} pause={false} className='h-100'>
+      <Carousel
+        interval={2500}
+        pause={false}
+        className='h-100'
+        variant={`${props.variant}`}
+      >
         {slide1}
         {slide2}
         {slide3}

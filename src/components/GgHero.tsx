@@ -22,7 +22,7 @@ function GgHero() {
               <p className='text-light white-shadow'>
                 I'm passionate about developing robust, scalable, and
                 user-friendly software applications. This is where{" "}
-                <span className='white-shadow-high'>
+                <span className='white-shadow-high font-weight-bold'>
                   <span className='text-info'>GG</span>workz&nbsp;
                 </span>
                 comes in!

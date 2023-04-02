@@ -4,8 +4,10 @@ import "./assets/styles.css";
 import GgBackground from "./components/GgBackground";
 import GgBottomNav from "./components/GgBottomNav";
 import GgHero from "./components/GgHero";
+import GgHero2 from "./components/GgHero2";
 import GgHome from "./components/GgHome";
 import GgProjects from "./components/GgProjects";
+import GgStack from "./components/GgStack";
 import GgTopNav from "./components/GgTopNav";
 
 function App() {
@@ -25,8 +27,20 @@ function App() {
             <GgHero />
           </Col>
         </Row>
+        <div className='section-qt'></div>
+        <Row>
+          <Col>
+            <GgProjects />
+          </Col>
+        </Row>
+        <div className='section-qt'></div>
         <Row className='offset-nav-bottom'>
-          <GgProjects />
+          <GgStack />
+        </Row>
+        <Row>
+          <Col>
+            <GgHero2 />
+          </Col>
         </Row>
         <GgBottomNav />
       </QueryClientProvider>

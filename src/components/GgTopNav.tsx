@@ -11,12 +11,13 @@ function GgTopNav() {
       <Container fluid>
         <Navbar.Brand href='#home'>
           <Image
-            src={"/logo.svg"}
+            src={"https://i.ibb.co/nzrLVz8/Logo2.png"}
             fluid={false}
             height='24px'
+            width='21px'
             className='d-inline-block align-text-top'
           ></Image>
-          &nbsp;&nbsp;&nbsp;GGworkz
+          &nbsp;&nbsp;&nbsp;<span className='text-info'>GG</span>workz
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='navbar-dark-example' />
 

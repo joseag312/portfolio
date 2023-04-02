@@ -4,13 +4,15 @@ import GgProjectList from "./GgProjectList";
 
 function GgProjects() {
   return (
-    <div className='section position-relative'>
-      <Row>
-        <Col xs={1}></Col>
-        <Col xs={3}>
+    <div className='section position-relative' id='Home'>
+      <a id='#projects'></a>
+      <Row className='h-20'>
+        <Col xs={12}>
           <GgProjectList />
         </Col>
-        <Col xs={8}>
+      </Row>
+      <Row className='h-80'>
+        <Col xs={12}>
           <GgProjectBin />
         </Col>
       </Row>

@@ -19,6 +19,10 @@ body {
   height: calc(100vh - 112px);
 }
 
+.section-qt {
+  height: 25vh;
+}
+
 /**************************************/
 /* Home
 /**************************************/
@@ -103,6 +107,48 @@ body {
 }
 
 /**************************************/
+/* Stack
+/**************************************/
+
+.stack-icon {
+  filter: drop-shadow(0px 0px 14px rgb(256 256 256 / 1.4));
+}
+
+.stack-icon:hover {
+  filter: drop-shadow(0px 0px 8px rgb(256 256 256 / 1.4));
+}
+
+.stack-icon:active {
+  filter: drop-shadow(0px 0px 4px rgb(256 256 256 / 1.4));
+}
+
+.fade {
+  -webkit-transition-duration: 5s; /* Safari */
+  transition-duration: 0.3s;
+}
+
+.fade.show {
+  -webkit-transition-duration: 5s; /* Safari */
+  transition-duration: 0.3s;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.h-30 {
+  height: 30%;
+}
+
+.h-70 {
+  height: 70%;
+}
+
+/**************************************/
 /* Background
 /**************************************/
 
@@ -122,6 +168,14 @@ body {
 /**************************************/
 /* Utility
 /**************************************/
+
+.h-20 {
+  height: 20%;
+}
+
+.h-80 {
+  height: 80%;
+}
 
 .position-relative {
   position: relative;
