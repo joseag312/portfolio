@@ -104,7 +104,7 @@ function GgStack() {
             <p className='text-center text-light white-shadow hexagon-title'>
               I've been using some cool stuff!
             </p>
-            <p className='text-center text-light white-shadow hexagon-subtitle'>
+            <p className='text-center text-light white-shadow'>
               Click to learn more
             </p>
           </Container>

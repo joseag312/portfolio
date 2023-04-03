@@ -3,8 +3,6 @@ function GgHexagonLoader() {
     <>
       <svg
         version='1.1'
-        width={480}
-        height={480}
         viewBox='0 0 320 320'
         fill='none'
         stroke='#000'

@@ -1,68 +1,14 @@
 import { useState } from "react";
 import GgCarousel from "./GgCarousel";
 import GgHexagonLoader from "./GgHexagonLoader";
+import { PROJECT_CONFIG } from "./GgProjectConfig";
 
 function GgProjectBin() {
   const [binStatus, setBinStatus] = useState("inactive");
   const [projectName, setProjectName] = useState("");
   const [projectData, setProjectData] = useState({});
 
-  const projectList: any = {
-    project1: {
-      variant: "dark",
-      title1: "Project 1",
-      caption1: "Caption 1",
-      img1: "https://i.ibb.co/hZp03Rs/desktop-large2.jpg",
-      position1: "middle",
-      color1: "dark",
-      title2: "Project 1",
-      caption2: "Caption 2",
-      img2: "https://i.ibb.co/VSzk3PM/paint-web.jpg",
-      position2: "bottom",
-      color2: "light",
-      title3: "Project 1",
-      caption3: "Caption 3",
-      img3: "https://i.ibb.co/vHKWrn7/one-click-away.jpg",
-      position3: "top",
-      color3: "dark",
-    },
-    project2: {
-      variant: "dark",
-      title1: "Project 2",
-      caption1: "Caption 1",
-      img1: "https://i.ibb.co/hZp03Rs/desktop-large2.jpg",
-      position1: "middle",
-      color1: "dark",
-      title2: "Project 2",
-      caption2: "Caption 2",
-      img2: "https://i.ibb.co/VSzk3PM/paint-web.jpg",
-      position2: "bottom",
-      color2: "light",
-      title3: "Project 2",
-      caption3: "Caption 3",
-      img3: "https://i.ibb.co/vHKWrn7/one-click-away.jpg",
-      position3: "top",
-      color3: "dark",
-    },
-    project3: {
-      variant: "dark",
-      title1: "Project 3",
-      caption1: "Caption 1",
-      img1: "https://i.ibb.co/hZp03Rs/desktop-large2.jpg",
-      position1: "middle",
-      color1: "dark",
-      title2: "Project 3",
-      caption2: "Caption 2",
-      img2: "https://i.ibb.co/VSzk3PM/paint-web.jpg",
-      position2: "bottom",
-      color2: "light",
-      title3: "Project 3",
-      caption3: "Caption 3",
-      img3: "https://i.ibb.co/vHKWrn7/one-click-away.jpg",
-      position3: "top",
-      color3: "dark",
-    },
-  };
+  const projectList: any = PROJECT_CONFIG;
 
   // Event listeners
   function handleDragOver(e: React.DragEvent) {
@@ -88,7 +34,7 @@ function GgProjectBin() {
 
   // Cool svg let it run
   if (binStatus == "loading") {
-    setTimeout(buildProjectLocal, 2500);
+    setTimeout(buildProjectLocal, 3500);
   }
 
   // Fetch portfolio.json from selected project
@@ -112,7 +58,9 @@ function GgProjectBin() {
   if (binStatus == "loading") {
     spinner = (
       <div className='d-flex h-100 flex-column align-items-center justify-content-center'>
-        <GgHexagonLoader />
+        <div className='hexagon-loader'>
+          <GgHexagonLoader />
+        </div>
       </div>
     );
   }
@@ -139,6 +87,15 @@ function GgProjectBin() {
         position3={data.position3}
         color3={data.color3}
       ></GgCarousel>
+    );
+  } else if (binStatus != "loading") {
+    project = (
+      <div className='h-100 w-100 d-flex flex-column align-items-center justify-content-center text-center'>
+        <p className='hexagon-title white-shadow text-light'>My handiwork 🥽</p>
+        <p className='white-shadow text-light text-center'>
+          Drag and drop to see a project
+        </p>
+      </div>
     );
   }
 

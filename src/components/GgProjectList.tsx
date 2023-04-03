@@ -1,7 +1,15 @@
 import GgProject from "./GgProject";
 
 function GgProjectList() {
-  let repos: string[] = ["project1", "project2", "project3"];
+  let repos: string[] = [
+    "project1",
+    "project2",
+    "project3",
+    "project4",
+    "project5",
+    "project6",
+    "project7",
+  ];
   // const getFacts = async () => {
   //   const res = await fetch("https://api.github.com/users/joseag312/repos");
   //   return res.json();
@@ -28,11 +36,7 @@ function GgProjectList() {
 
   return (
     <div className='h-100 w-100 d-flex flex-row align-items-center justify-content-around position-relative'>
-      <div className='w-50 text-center'>
-        <p className='hexagon-title white-shadow text-light'>My handiwork 🥽</p>
-        <p className='white-shadow text-light text-center'>Drag and drop!</p>
-      </div>
-      <div className='h-100 w-50 d-flex flex-row align-items-center justify-content-around'>
+      <div className='h-100 w-100 mx-4 px-4 d-flex flex-row flex-wrap align-items-center justify-content-start'>
         {repos.map((repoName) => (
           <GgProject key={`${repoName}`} projectName={`${repoName}`} />
         ))}
