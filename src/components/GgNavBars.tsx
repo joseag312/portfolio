@@ -1,11 +1,11 @@
-import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/esm/Container";
+import Nav from "react-bootstrap/esm/Nav";
+import GgFavIcon from "./GgFavIcon";
 
-// Todo: Event bubbling look up and hide nav when clicked outside
-function GgTopNav() {
+export function GgTopNav() {
   return (
     <Navbar variant='dark' bg='dark' expand='lg' fixed='top'>
       <Container fluid>
@@ -46,4 +46,25 @@ function GgTopNav() {
   );
 }
 
-export default GgTopNav;
+export function GgBottomNav() {
+  return (
+    <Navbar bg='dark' variant='dark' fixed='bottom'>
+      <Container fluid className='justify-content-end'>
+        <Nav>
+          <Nav.Link href='https://www.linkedin.com/in/jose-azuara/'>
+            <GgFavIcon iconType='LinkedIn' />
+          </Nav.Link>
+          <Nav.Link href='https://github.com/joseag312'>
+            <GgFavIcon iconType='GitHub' />
+          </Nav.Link>
+          <Nav.Link href='tel:555-555-5555'>
+            <GgFavIcon iconType='Phone' />
+          </Nav.Link>
+          <Nav.Link href='mailto:example@example.com'>
+            <GgFavIcon iconType='Mail' />
+          </Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
+  );
+}

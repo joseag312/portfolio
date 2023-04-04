@@ -1,7 +1,7 @@
 import { useState } from "react";
 import GgCarousel from "./GgCarousel";
-import GgHexagonLoader from "./GgHexagonLoader";
 import { PROJECT_CONFIG } from "./GgProjectConfig";
+import { GgHexagonLoader } from "./GgSVG";
 
 function GgProjectBin() {
   const [binStatus, setBinStatus] = useState("inactive");
@@ -36,22 +36,6 @@ function GgProjectBin() {
   if (binStatus == "loading") {
     setTimeout(buildProjectLocal, 3500);
   }
-
-  // Fetch portfolio.json from selected project
-  // function buildProject() {
-  //   fetch(
-  //     "https://api.github.com/repos/joseag312/" +
-  //       projectName +
-  //       "/contents/portfolio.json"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((response) => atob(response.content))
-  //     .then((response) => JSON.parse(response))
-  //     .then((response) => {
-  //       setProjectData(response);
-  //       setBinStatus("loaded");
-  //     });
-  // }
 
   // Conditional Display
   let spinner;
