@@ -1,10 +1,15 @@
 import { Col, Row } from "react-bootstrap";
 import { QueryClient, QueryClientProvider } from "react-query";
-import "../assets/styles.css";
-import GgBackground from "./GgBackground";
-import { GgBottomNav, GgTopNav } from "./GgNavBars";
-import { GgHero, GgHero2, GgHome, GgProjects } from "./GgSection";
-import GgStack from "./GgStack";
+import GgBackground from "./src/components/GgBackground";
+import { GgBottomNav, GgTopNav } from "./src/components/GgNavBars";
+import {
+  GgHero,
+  GgHero2,
+  GgHome,
+  GgProjects,
+} from "./src/components/GgSection";
+import GgStack from "./src/components/GgStack";
+import "./src/styles/styles.css";
 
 function App() {
   const queryClient = new QueryClient();

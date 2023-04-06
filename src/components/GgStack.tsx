@@ -108,7 +108,7 @@ function GgStack() {
     backList = (
       <img
         className='d-block stack-icon'
-        src='/backend1.png'
+        src='/backend.png'
         alt=''
         width='100'
         height='100'
@@ -123,7 +123,7 @@ function GgStack() {
     opsList = (
       <img
         className='d-block stack-icon'
-        src='/devops1.png'
+        src='/devops.png'
         alt=''
         width='100'
         height='100'
