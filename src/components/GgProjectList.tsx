@@ -1,50 +1,40 @@
-interface ProjectProps {
+interface GgProjectProps {
   projectName: string;
+  onProjectSelect: (name: string) => void;
 }
 
-function GgProject(props: ProjectProps) {
-  let propsStr = JSON.stringify(props);
-
-  function handleDrag(e: React.DragEvent<HTMLDivElement>) {
-    e.dataTransfer.setData("props", propsStr);
-    e.dataTransfer.setDragImage(e.target as Element, 35, 35);
+function GgProject(props: GgProjectProps) {
+  function handleClick() {
+    props.onProjectSelect(props.projectName);
   }
 
   return (
-    <div
-      className='project-icon widget m-2--responsive'
-      draggable={true}
-      onDragStart={handleDrag}
-      data-source-data={`${propsStr}`}
-    >
-      <svg
-        className='hexagon-project'
-        fill='teal'
-        viewBox='0 0 16 16'
-        xmlns='http://www.w3.org/2000/svg'
-      >
-        <path d='M8 8v5h4V8h-2V6H8v2zm-8 8h16V0H0v16zm2-2V2h12v12H2zM8 4h2V2H8v2zm2 2h2V4h-2v2zm-1 6v-2h2v2H9z' />
+    <div className='project-icon widget m-2--responsive' onClick={handleClick} style={{ cursor: "pointer" }}>
+      <svg fill='white' height='80px' width='80px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' stroke='black' viewBox='0 0 490 490' dur={"0.5s"}>
+        <g>
+          <path
+            d='M466.032,367.5v-245L245,0L23.968,122.5v245L245,490L466.032,367.5z M118.865,175.094L245,105.188l126.136,69.906v139.813
+          L245,384.813l-126.135-69.906V175.094z'
+          />
+          <polygon points='331.299,292.828 331.299,197.172 245,149.343 158.701,197.172 158.701,292.828 245,340.657 	' />
+        </g>
       </svg>
     </div>
   );
 }
 
-function GgProjectList() {
-  let repos: string[] = [
-    "project1",
-    "project2",
-    "project3",
-    "project4",
-    "project5",
-    "project6",
-    "project7",
-  ];
+interface GgProjectListProps {
+  onProjectSelect: (name: string) => void;
+}
+
+function GgProjectList({ onProjectSelect }: GgProjectListProps) {
+  let repos: string[] = ["project1", "project2", "project3", "project4", "project5", "project6", "project7"];
 
   return (
-    <div className='h-100 w-100 d-flex flex-row align-items-center justify-content-around position-relative'>
-      <div className='h-100 w-100 mx-4 px-4 d-flex flex-row flex-wrap align-items-center justify-content-start'>
+    <div className='h-80 w-100 d-flex flex-row align-items-center justify-content-around position-relative'>
+      <div className='h-100 w-100 mx-4 px-4 d-flex flex-row flex-wrap align-items-center justify-content-center'>
         {repos.map((repoName) => (
-          <GgProject key={`${repoName}`} projectName={`${repoName}`} />
+          <GgProject key={`${repoName}`} projectName={`${repoName}`} onProjectSelect={onProjectSelect} />
         ))}
       </div>
     </div>

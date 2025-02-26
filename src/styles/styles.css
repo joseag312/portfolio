@@ -241,3 +241,47 @@ body {
   border-style: dashed !important;
   border-width: 3px !important;
 }
+
+/**************************************/
+/* Test
+/**************************************/
+
+.project-list {
+  list-style: none;
+  padding: 0;
+}
+
+.project-list li {
+  margin: 10px 0;
+}
+
+.project-list button {
+  width: 200px;
+  text-align: center;
+}
+
+.ml-1 {
+  margin-left: 1em;
+}
+
+.mt-3 {
+  margin-top: 5em;
+}
+
+.btn-black-white {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.btn-black-white:hover {
+  background-color: darkcyan;
+  color: white;
+  border: 1px solid white;
+}

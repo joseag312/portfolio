@@ -23,17 +23,9 @@ function GgStackList({ type }: StackType) {
   return (
     <>
       {iconDescs.map((iconDesc, index) => (
-        <div
-          key={iconDesc}
-          className='h-20 w-100 d-flex flex-row align-items-center justify-content-around'
-        >
+        <div key={iconDesc} className='h-20 w-100 d-flex flex-row align-items-center justify-content-around'>
           <div className='w-60 d-flex flex-row justify-content-center align items-center'>
-            <img
-              className='d-block white-shadow h-100'
-              src={imgPaths[index]}
-              alt=''
-              width=''
-            />
+            <img className='d-block white-shadow h-100' src={imgPaths[index]} alt='' width='' />
           </div>
           <div className='w-40 text-left'>
             <p className='hexagon-subtitle white-shadow m-0'>{iconDesc}</p>
@@ -90,45 +82,21 @@ function GgStack() {
 
   let frontList;
   if (!frontActive) {
-    frontList = (
-      <img
-        className='d-block stack-icon'
-        src='/frontend.png'
-        alt=''
-        width='100'
-        height='100'
-      />
-    );
+    frontList = <img className='d-block stack-icon' src='/frontend.png' alt='' width='100' height='100' />;
   } else {
     frontList = <GgStackList type='front'></GgStackList>;
   }
 
   let backList;
   if (!backActive) {
-    backList = (
-      <img
-        className='d-block stack-icon'
-        src='/backend.png'
-        alt=''
-        width='100'
-        height='100'
-      />
-    );
+    backList = <img className='d-block stack-icon' src='/backend.png' alt='' width='100' height='100' />;
   } else {
     backList = <GgStackList type='back'></GgStackList>;
   }
 
   let opsList;
   if (!opsActive) {
-    opsList = (
-      <img
-        className='d-block stack-icon'
-        src='/devops.png'
-        alt=''
-        width='100'
-        height='100'
-      />
-    );
+    opsList = <img className='d-block stack-icon' src='/devops.png' alt='' width='100' height='100' />;
   } else {
     opsList = (
       <>
@@ -138,64 +106,39 @@ function GgStack() {
   }
 
   return (
-    <Container className='section-fluid position-relative' id='Home'>
+    <Container className='section-fluid position-relative' id='Stack'>
       <a id='#stack'></a>
       <Row className='h-20'>
         <Col className='h-100'>
           <Container className='h-100 d-flex flex-column align-items-center justify-content-end'>
-            <p className='text-center text-light white-shadow hexagon-title'>
-              I've been using some cool stuff!
-            </p>
-            <p className='text-center text-light white-shadow'>
-              Click to learn more
-            </p>
+            <p className='text-center text-light white-shadow hexagon-title'>Been using some cool stuff! 🥽</p>
+            <p className='text-center text-light white-shadow'>Click to learn more</p>
           </Container>
         </Col>
       </Row>
       <Row className='h-80'>
-        <Col md={4} className='p-3'>
-          <div
-            className={`h-100 stack-front fade show ${
-              frontActive ? "border rounded box-white-shadow" : ""
-            }`}
-          >
+        <Col md={4} className='p-3 h-80'>
+          <div className={`h-100 stack-front fade show ${frontActive ? "border rounded box-white-shadow" : ""}`}>
             <div className='h-100 d-flex flex-column align-items-center justify-content-around'>
-              <div
-                onClick={frontActive ? () => {} : handleClickFront}
-                className='stack-front h-100 w-100 fade show d-flex flex-column align-items-center justify-content-around'
-              >
+              <div onClick={frontActive ? () => {} : handleClickFront} className='stack-front h-100 w-100 fade show d-flex flex-column align-items-center justify-content-around'>
                 {frontList}
               </div>
             </div>
           </div>
         </Col>
-        <Col md={4} className='p-3'>
-          <div
-            className={`h-100 stack-back fade show ${
-              backActive ? "border rounded box-white-shadow" : ""
-            }`}
-          >
+        <Col md={4} className='p-3 h-80'>
+          <div className={`h-100 stack-back fade show ${backActive ? "border rounded box-white-shadow" : ""}`}>
             <div className='h-100 d-flex flex-column align-items-center justify-content-center'>
-              <div
-                onClick={backActive ? () => {} : handleClickBack}
-                className='stack-back h-100 w-100 fade show d-flex flex-column align-items-center justify-content-around'
-              >
+              <div onClick={backActive ? () => {} : handleClickBack} className='stack-back h-100 w-100 fade show d-flex flex-column align-items-center justify-content-around'>
                 {backList}
               </div>
             </div>
           </div>
         </Col>
-        <Col md={4} className='p-3'>
-          <div
-            className={`h-100 stack-ops fade show ${
-              opsActive ? "border rounded box-white-shadow " : ""
-            }`}
-          >
+        <Col md={4} className='p-3 h-80'>
+          <div className={`h-100 stack-ops fade show ${opsActive ? "border rounded box-white-shadow " : ""}`}>
             <div className='h-100 d-flex flex-column align-items-center justify-content-center'>
-              <div
-                onClick={opsActive ? () => {} : handleClickOps}
-                className='stack-ops h-100 w-100 fade show d-flex flex-column align-items-center justify-content-around'
-              >
+              <div onClick={opsActive ? () => {} : handleClickOps} className='stack-ops h-100 w-100 fade show d-flex flex-column align-items-center justify-content-around'>
                 {opsList}
               </div>
             </div>

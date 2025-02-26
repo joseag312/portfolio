@@ -1,44 +1,50 @@
+import { useEffect, useRef, useState } from "react";
 import Image from "react-bootstrap/Image";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/esm/Container";
 import Nav from "react-bootstrap/esm/Nav";
 import GgFavIcon from "./GgFavIcon";
 
 export function GgTopNav() {
+  const [expanded, setExpanded] = useState(false);
+  const navbarRef = useRef(null);
+
+  // Close Navbar on Outside Click
+  useEffect(() => {
+    function handleOutsideClick(event: MouseEvent) {
+      if (navbarRef.current && !(navbarRef.current as any).contains(event.target)) {
+        setExpanded(false);
+      }
+    }
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
   return (
-    <Navbar variant='dark' bg='dark' expand='lg' fixed='top'>
+    <Navbar variant='dark' bg='dark' expand='lg' fixed='top' expanded={expanded} onToggle={(isExpanded) => setExpanded(isExpanded)} ref={navbarRef}>
       <Container fluid>
         <Navbar.Brand href='#home'>
-          <Image
-            src={"https://i.ibb.co/nzrLVz8/Logo2.png"}
-            fluid={false}
-            height='24px'
-            width='21px'
-            className='d-inline-block align-text-top'
-          ></Image>
+          <Image src={"https://i.ibb.co/nzrLVz8/Logo2.png"} fluid={false} height='24px' width='21px' className='d-inline-block align-text-top'></Image>
           &nbsp;&nbsp;&nbsp;<span className='text-info'>GG</span>workz
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls='navbar-dark-example' />
-
+        <Navbar.Toggle aria-controls='navbar-dark-example' onClick={() => setExpanded(!expanded)} />
         <Navbar.Collapse id='navbar-dark-example'>
           <Nav>
-            <Nav.Link href='#home'>Home</Nav.Link>
-            <NavDropdown
-              id='nav-dropdown-dark-example'
-              title='Dropdown'
-              menuVariant='dark'
-            >
-              <NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
-              <NavDropdown.Item href='#action/3.2'>
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href='#action/3.3'>Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href='#action/3.4'>
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link className='ml-1' href='#About' onClick={() => setExpanded(false)}>
+              About
+            </Nav.Link>
+            <Nav.Link className='ml-1' href='#Projects' onClick={() => setExpanded(false)}>
+              Projects
+            </Nav.Link>
+            <Nav.Link className='ml-1' href='#Stack' onClick={() => setExpanded(false)}>
+              Tech Stack
+            </Nav.Link>
+            <Nav.Link className='ml-1' href='#Coffee' onClick={() => setExpanded(false)}>
+              Coffee?
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

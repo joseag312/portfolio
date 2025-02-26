@@ -1,6 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import GgProjectBin from "./GgProjectBin";
-import GgProjectList from "./GgProjectList";
+import GgProjectContainer from "./GgProjectContainer";
 
 export function GgHome() {
   return (
@@ -12,12 +11,9 @@ export function GgHome() {
           <Container className=' h-100 d-flex flex-column align-items-center justify-content-around'>
             <br className='d-none d-md-block' />
             <Container className='text-center'>
-              <p className='hexagon-title white-shadow text-nowrap'>
-                Hi! I'm Jose.
-              </p>
-              <p className='hexagon-subtitle white-shadow text-nowrap'>
-                A software engineer&nbsp;☕️
-              </p>
+              <p className='hexagon-title white-shadow text-nowrap'>Hi! I'm Jose.</p>
+              <p className='hexagon-subtitle white-shadow text-nowrap'>A software engineer&nbsp;☕️</p>
+              <p>You're welcome...</p>
             </Container>
           </Container>
         </Col>
@@ -29,36 +25,23 @@ export function GgHome() {
 
 export function GgHero() {
   return (
-    <Container className='section position-relative' id='Home' fluid>
+    <Container className='section position-relative' id='About' fluid>
       <a id='#hero'></a>
       <Row className='h-100'>
         <Col xs={4}></Col>
         <Col className='h-100' lg={4}>
           <Container className=' h-100 d-flex flex-column align-items-center justify-content-around'>
             <Container className='text-center'>
-              <img
-                className='d-block mx-auto mb-4 white-shadow'
-                src='https://i.ibb.co/nzrLVz8/Logo2.png'
-                alt=''
-                width=''
-                height={150}
-              />
-              <p className='hexagon-title white-shadow text-nowrap'>
-                A quick rant...
-              </p>
+              <img className='d-block mx-auto mb-4 white-shadow' src='https://i.ibb.co/nzrLVz8/Logo2.png' alt='' width='' height={150} />
+              <p className='hexagon-title white-shadow text-nowrap'>A quick rant...</p>
               <p className='text-light white-shadow'>
-                I'm passionate about developing robust, scalable, and
-                user-friendly software applications. This is where{" "}
+                I'm passionate about developing robust, scalable, and user-friendly software applications. This is where{" "}
                 <span className='white-shadow-high font-weight-bold'>
                   <span className='text-info'>GG</span>workz&nbsp;
                 </span>
                 comes in!
               </p>
-              <p className='px-5 text-light white-shadow'>
-                With experience in the full software development life cycle, my
-                goal is to use vanguard technologies to deliver innovative
-                solutions for your business needs.
-              </p>
+              <p className='px-5 text-light white-shadow'>With experience in the full software development life cycle, my goal is to use vanguard technologies to deliver innovative solutions for your business needs.</p>
             </Container>
           </Container>
         </Col>
@@ -70,19 +53,15 @@ export function GgHero() {
 
 export function GgHero2() {
   return (
-    <Container className='section position-relative' id='Home' fluid>
+    <Container className='section position-relative' id='Coffee' fluid>
       <a id='#hero'></a>
       <Row className='h-100'>
         <Col xs={4}></Col>
         <Col className='h-100' lg={4}>
           <Container className=' h-100 d-flex flex-column align-items-center justify-content-around'>
             <Container className='text-center'>
-              <p className='hexagon-title white-shadow text-nowrap'>
-                Let's work together!
-              </p>
-              <p className='text-light white-shadow'>
-                How do you take your coffee?
-              </p>
+              <p className='hexagon-title white-shadow text-nowrap'>Let's work together!</p>
+              <p className='text-light white-shadow'>How do you take your coffee?</p>
             </Container>
           </Container>
         </Col>
@@ -94,16 +73,11 @@ export function GgHero2() {
 
 export function GgProjects() {
   return (
-    <div className='section-fluid position-relative' id='Home'>
+    <div className='section position-relative' id='Projects'>
       <a id='#projects'></a>
-      <Row className='section-fluid-20'>
-        <Col xs={12}>
-          <GgProjectList />
-        </Col>
-      </Row>
-      <Row className='section-80'>
-        <Col xs={12}>
-          <GgProjectBin />
+      <Row className='h-100'>
+        <Col className='h-100' xs={12}>
+          <GgProjectContainer />
         </Col>
       </Row>
     </div>

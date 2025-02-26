@@ -1,17 +1,7 @@
 export function GgHexagonBox() {
   return (
     <div className='white-shadow widget'>
-      <svg
-        fill='teal'
-        height='80px'
-        width='80px'
-        version='1.1'
-        id='Capa_1'
-        xmlns='http://www.w3.org/2000/svg'
-        stroke='black'
-        viewBox='0 0 490 490'
-        dur={"0.5s"}
-      >
+      <svg fill='white' height='80px' width='80px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' stroke='black' viewBox='0 0 490 490' dur={"0.5s"}>
         <g>
           <path
             d='M466.032,367.5v-245L245,0L23.968,122.5v245L245,490L466.032,367.5z M118.865,175.094L245,105.188l126.136,69.906v139.813
@@ -27,112 +17,31 @@ export function GgHexagonBox() {
 export function GgHexagonLoader() {
   return (
     <>
-      <svg
-        version='1.1'
-        viewBox='0 0 320 320'
-        fill='none'
-        stroke='#000'
-        strokeLinecap='round'
-        xmlns='http://www.w3.org/2000/svg'
-        xmlnsXlink='http://www.w3.org/1999/xlink'
-      >
+      <svg version='1.1' viewBox='0 0 320 320' fill='none' stroke='#000' strokeLinecap='round' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink'>
         <defs>
           <path id='r1'>
-            <animate
-              id='p1'
-              attributeName='d'
-              values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0'
-              dur='6s'
-              repeatCount='indefinite'
-            />
-            <animate
-              attributeName='stroke-width'
-              values='0;4;4;4;0'
-              dur='6s'
-              repeatCount='indefinite'
-              begin='p1.begin'
-            />
+            <animate id='p1' attributeName='d' values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0' dur='6s' repeatCount='indefinite' />
+            <animate attributeName='stroke-width' values='0;4;4;4;0' dur='6s' repeatCount='indefinite' begin='p1.begin' />
           </path>
           <path id='r2'>
-            <animate
-              attributeName='d'
-              values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0'
-              dur='6s'
-              repeatCount='indefinite'
-              begin='p1.begin+1s'
-            />
-            <animate
-              attributeName='stroke-width'
-              values='0;4;4;4;0'
-              dur='6s'
-              repeatCount='indefinite'
-              begin='p1.begin+1s'
-            />
+            <animate attributeName='d' values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0' dur='6s' repeatCount='indefinite' begin='p1.begin+1s' />
+            <animate attributeName='stroke-width' values='0;4;4;4;0' dur='6s' repeatCount='indefinite' begin='p1.begin+1s' />
           </path>
           <path id='r3'>
-            <animate
-              attributeName='d'
-              values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0'
-              dur='6s'
-              repeatCount='indefinite'
-              begin='p1.begin+2s'
-            />
-            <animate
-              attributeName='stroke-width'
-              values='0;4;4;4;0'
-              dur='6s'
-              repeatCount='indefinite'
-              begin='p1.begin+2s'
-            />
+            <animate attributeName='d' values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0' dur='6s' repeatCount='indefinite' begin='p1.begin+2s' />
+            <animate attributeName='stroke-width' values='0;4;4;4;0' dur='6s' repeatCount='indefinite' begin='p1.begin+2s' />
           </path>
           <path id='r4'>
-            <animate
-              id='p1'
-              attributeName='d'
-              values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0'
-              dur='6s'
-              repeatCount='indefinite'
-              begin='p1.begin+3s'
-            />
-            <animate
-              attributeName='stroke-width'
-              values='0;4;4;4;0'
-              dur='6s'
-              repeatCount='indefinite'
-              begin='p1.begin+3s'
-            />
+            <animate id='p1' attributeName='d' values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0' dur='6s' repeatCount='indefinite' begin='p1.begin+3s' />
+            <animate attributeName='stroke-width' values='0;4;4;4;0' dur='6s' repeatCount='indefinite' begin='p1.begin+3s' />
           </path>
           <path id='r5'>
-            <animate
-              attributeName='d'
-              values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0'
-              dur='6s'
-              repeatCount='indefinite'
-              begin='p1.begin+4s'
-            />
-            <animate
-              attributeName='stroke-width'
-              values='0;4;4;4;0'
-              dur='6s'
-              repeatCount='indefinite'
-              begin='p1.begin+4s'
-            />
+            <animate attributeName='d' values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0' dur='6s' repeatCount='indefinite' begin='p1.begin+4s' />
+            <animate attributeName='stroke-width' values='0;4;4;4;0' dur='6s' repeatCount='indefinite' begin='p1.begin+4s' />
           </path>
           <path id='r6'>
-            <animate
-              attributeName='d'
-              values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0'
-              dur='6s'
-              repeatCount='indefinite'
-              begin='p1.begin+5s'
-            />
-            <animate
-              attributeName='stroke-width'
-              values='0;4;4;4;0'
-              dur='6s'
-              repeatCount='indefinite'
-              begin='p1.begin+5s'
-            />
+            <animate attributeName='d' values='m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0' dur='6s' repeatCount='indefinite' begin='p1.begin+5s' />
+            <animate attributeName='stroke-width' values='0;4;4;4;0' dur='6s' repeatCount='indefinite' begin='p1.begin+5s' />
           </path>
         </defs>
         <use xlinkHref='#r1' />
