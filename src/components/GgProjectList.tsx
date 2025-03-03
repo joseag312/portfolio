@@ -31,12 +31,15 @@ function GgProjectList({ onProjectSelect }: GgProjectListProps) {
   let repos: string[] = ["project1", "project2", "project3", "project4", "project5", "project6", "project7"];
 
   return (
-    <div className='h-80 w-100 d-flex flex-row align-items-center justify-content-around position-relative'>
-      <div className='h-100 w-100 mx-4 px-4 d-flex flex-row flex-wrap align-items-center justify-content-center'>
-        {repos.map((repoName) => (
-          <GgProject key={`${repoName}`} projectName={`${repoName}`} onProjectSelect={onProjectSelect} />
-        ))}
+    <div className='h-80 w-100 d-flex flex-column align-items-center justify-content-around position-relative'>
+      <div className='h-80 w-100 mx-4 px-4 d-flex flex-row flex-wrap align-items-center justify-content-center'>
+        <div className='h-100 w-100 mx-4 px-4 d-flex flex-row flex-wrap align-items-center justify-content-center'>
+          {repos.map((repoName) => (
+            <GgProject key={`${repoName}`} projectName={`${repoName}`} onProjectSelect={onProjectSelect} />
+          ))}
+        </div>
       </div>
+      <div className='h-20'></div>
     </div>
   );
 }

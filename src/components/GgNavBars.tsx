@@ -26,7 +26,7 @@ export function GgTopNav() {
   return (
     <Navbar variant='dark' bg='dark' expand='lg' fixed='top' expanded={expanded} onToggle={(isExpanded) => setExpanded(isExpanded)} ref={navbarRef}>
       <Container fluid>
-        <Navbar.Brand href='#home'>
+        <Navbar.Brand href='#Home'>
           <Image src={"https://i.ibb.co/nzrLVz8/Logo2.png"} fluid={false} height='24px' width='21px' className='d-inline-block align-text-top'></Image>
           &nbsp;&nbsp;&nbsp;<span className='text-info'>GG</span>workz
         </Navbar.Brand>

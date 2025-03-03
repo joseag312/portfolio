@@ -93,7 +93,7 @@ function GgProjectContainer() {
     <div className='h-100 position-relative p-5'>
       <div
         className={`h-100 border rounded 
-        ${binStatus === "loading" ? "white-fill " : ""} 
+        ${binStatus === "loading" ? "white-fill" : ""} 
         ${binStatus === "loaded" ? "white-fill-2" : ""} `}
       >
         {spinner}

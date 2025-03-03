@@ -106,8 +106,7 @@ function GgStack() {
   }
 
   return (
-    <Container className='section-fluid position-relative' id='Stack'>
-      <a id='#stack'></a>
+    <Container className='section-fluid position-relative'>
       <Row className='h-20'>
         <Col className='h-100'>
           <Container className='h-100 d-flex flex-column align-items-center justify-content-end'>
